@@ -28,4 +28,7 @@
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</string>
     <string name="read_more"><u>Читать далее</u></string>
     <string name="example_date">Вчера, 22:19</string>
+    <string name="short_description">Short description of the video</string>
+    <string name="title_of_the_video">Title of the video</string>
+
 </resources>

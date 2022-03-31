@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="comments">
+        <item>Привет</item>
+        <item>Всем привет</item>
+        <item>Здравствуйте</item>
+        <item>Наконец-то!</item>
+        <item>О, мой любимый дебют</item>
+        <item>Кто играет сегодня?</item>
+        <item>Как дела?</item>
+        <item>Отличный ход</item>
+        <item>Супер!!</item>
+        <item>Как вы относитесь к скандинавской защите?</item>
+        <item>Играете Пирца-Уфимцева?</item>
+        <item>Там мат был на b7</item>
+        <item>Висит конь</item>
+        <item>Как так???</item>
+        <item>Обожаю ваши стримы!</item>
+        <item>Как начать играть в шахматы?</item>
+        <item>С чего начать изучение шахмат?</item>
+        <item>Как играть так же круто..?</item>
+        <item>Почему не играете ферзевый?</item>
+        <item>Накамура, думаю, выиграет турнир претендентов</item>
+        <item>Во сколько турнир?</item>
+    </string-array>
+
+</resources>
