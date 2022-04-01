@@ -11,8 +11,6 @@ import com.example.chesstv.R
 import com.example.chesstv.streams.StreamAdapter
 import com.example.chesstv.streams.Streams
 
-private lateinit var adapter: StreamAdapter
-private val listStreams = mutableListOf<Streams>()
 
 class StreamFragment: Fragment(R.layout.fragment_stream) {
 
@@ -32,7 +30,7 @@ class StreamFragment: Fragment(R.layout.fragment_stream) {
         return view
     }
 
-    fun fillData(): List<Streams> {
+    private fun fillData(): List<Streams> {
         val data = mutableListOf<Streams>()
         for (i in 0..10) {
             data.add(Streams(1,"Some title 1", "Video description 1", R.drawable.ic_example_avatar, 1))
