@@ -21,9 +21,8 @@ import java.io.IOException
 private lateinit var adapter: NewsAdapter
 private val listNews = mutableListOf<News>()
 
-/*Тут всё надо исправлять. Крутина не должна быть тут
-  Перенести логику во вьюмодель, использовать ливдату
- */
+/*Тут всё надо исправлять. Корутина не должна быть тут
+  Перенести логику во вьюмодель, использовать ливдату */
 
 class HomeFragment: Fragment(R.layout.fragment_home) {
 
