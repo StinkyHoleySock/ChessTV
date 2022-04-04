@@ -18,7 +18,7 @@ import org.jsoup.nodes.Document
 import org.jsoup.select.Elements
 import java.io.IOException
 
-private lateinit var adapter: NewsAdapter
+lateinit var adapter: NewsAdapter
 private val listNews = mutableListOf<News>()
 
 /*Тут всё надо исправлять. Корутина не должна быть тут

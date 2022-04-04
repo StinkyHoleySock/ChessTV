@@ -12,6 +12,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.chesstv.R
 import com.example.chesstv.streams.StreamAdapter
 import com.example.chesstv.streams.Streams
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import java.util.*
+import kotlin.concurrent.schedule
 
 
 class StreamFragment: Fragment(R.layout.fragment_stream), StreamAdapter.MyClickListener {
@@ -40,13 +45,12 @@ class StreamFragment: Fragment(R.layout.fragment_stream), StreamAdapter.MyClickL
         return view
     }
 
-    //private fun fillData(): List<Streams> {
-    //    val data = mutableListOf<Streams>()
-    //    for (i in 0..10) {
-    //        data.add(Streams(1,"Some title 1", "Video description 1", R.drawable.ic_example_avatar, 1))
-    //    }
-    //    return data
-    //}
+    fun delay() = runBlocking { // this: CoroutineScope
+        launch { // launch a new coroutine and continue
+            delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
+            println("World!") // print after delay
+        }
+    }
 
     override fun onClick(position: Int) {
         findNavController().navigate(R.id.action_streamFragment_to_watchStreamFragment)
