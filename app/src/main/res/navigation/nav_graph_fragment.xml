@@ -19,5 +19,13 @@
     <fragment
         android:id="@+id/streamFragment"
         android:name="com.example.chesstv.screens.StreamFragment"
-        android:label="Трансляции" />
+        android:label="Трансляции" >
+        <action
+            android:id="@+id/action_streamFragment_to_watchStreamFragment"
+            app:destination="@id/watchStreamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/watchStreamFragment"
+        android:name="com.example.chesstv.screens.WatchStreamFragment"
+        android:label="WatchStreamFragment" />
 </navigation>
