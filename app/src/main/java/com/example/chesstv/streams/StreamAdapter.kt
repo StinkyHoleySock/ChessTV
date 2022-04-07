@@ -27,7 +27,7 @@ class StreamAdapter(private val streams: MutableList<Streams>, val listener: MyC
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StreamHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.video_item, parent, false)
+            .inflate(R.layout.stream_item, parent, false)
         return StreamHolder(view)
     }
 

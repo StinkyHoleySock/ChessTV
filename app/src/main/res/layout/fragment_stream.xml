@@ -9,7 +9,7 @@
         android:id="@+id/streams_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        tools:listitem="@layout/video_item"
+        tools:listitem="@layout/stream_item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
