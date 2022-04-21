@@ -5,19 +5,27 @@
     android:layout_height="wrap_content"
     android:paddingStart="8dp"
     android:paddingEnd="8dp"
-    android:layout_marginBottom="8dp">
+    android:layout_marginBottom="8dp"
+    android:background="?android:selectableItemBackground">
 
-    <androidx.cardview.widget.CardView
+    <ImageView
         android:id="@+id/image_container"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="8dp"
-        android:elevation="12dp"
-        android:backgroundTint="@color/my_palette_3"
-        app:cardCornerRadius="50dp"
+        android:src="@drawable/ic_avatar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_more"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/tv_comment_username"
@@ -35,14 +43,16 @@
         android:id="@+id/tv_comment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:fontFamily="@font/raleway_light"
         android:text="@string/lorem"
         android:textColor="#000000"
         android:textSize="12sp"
         android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:lines="2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_more"
         app:layout_constraintStart_toEndOf="@+id/image_container"
         app:layout_constraintTop_toBottomOf="@+id/tv_comment_username" />
 

@@ -30,5 +30,6 @@
     <string name="example_date">Вчера, 22:19</string>
     <string name="short_description">Short description of the video</string>
     <string name="title_of_the_video">Title of the video</string>
+    <string name="remove">Remove</string>
 
 </resources>
