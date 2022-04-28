@@ -2,7 +2,6 @@ package com.example.chesstv.model
 
 import com.example.chesstv.tasks.Task
 import com.github.javafaker.Faker
-import java.util.concurrent.Callable
 
 typealias CommentsListener = (comment: List<Comment>) -> Unit
 
@@ -13,7 +12,6 @@ class CommentsService {
     private val listeners = mutableSetOf<CommentsListener>()
 
     fun loadComments(): Task<Unit> = Task.Base {
-        Thread.sleep(2000)
         val faker = Faker.instance()
         IMAGES.shuffle()
         users = (1..100).map {
@@ -29,7 +27,6 @@ class CommentsService {
     }
 
     fun deleteComment(comment: Comment): Task<Unit> = Task.Base {
-        Thread.sleep(2000)
         val indexToDelete = users.indexOfFirst { it.id == comment.id }
         if (indexToDelete != -1) {
             users.removeAt(indexToDelete)

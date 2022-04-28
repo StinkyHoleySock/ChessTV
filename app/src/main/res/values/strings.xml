@@ -31,5 +31,10 @@
     <string name="short_description">Short description of the video</string>
     <string name="title_of_the_video">Title of the video</string>
     <string name="remove">Remove</string>
+    <string name="views">127k views</string>
+    <string name="date">3 month ago</string>
+    <string name="channel_name">Chess channel</string>
+    <string name="subscribe">+ Подписаться</string>
+    <string name="subscribers">17k subscribers</string>
 
 </resources>
