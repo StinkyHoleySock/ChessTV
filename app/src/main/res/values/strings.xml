@@ -36,5 +36,10 @@
     <string name="channel_name">Chess channel</string>
     <string name="subscribe">+ Подписаться</string>
     <string name="subscribers">17k subscribers</string>
+    <string name="notification_settings">Настройки уведомлений</string>
+    <string name="profile_settings">Данные профиля</string>
+    <string name="privacy">Приватность</string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="no_notifications">Не беспокоить</string>
 
 </resources>

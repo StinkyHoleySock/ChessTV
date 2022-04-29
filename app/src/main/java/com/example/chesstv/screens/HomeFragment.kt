@@ -61,18 +61,22 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
                 val title = news.select("a.list-item__title.color-font-hover-only")
                     .eq(i)
                     .text()
+
                 val imageLink = news.select("a.list-item__image")
                     .select("picture")
                     .select("img")
                     .eq(i)
                     .attr("src")
+
                 val date = news.select("div[class=list-item__info]")
                     .select("div[class=list-item__date]")
                     .eq(i)
                     .text()
+
                 val linkToNews = news.select("a.list-item__title.color-font-hover-only")
                     .eq(i)
                     .attr("href")
+                
                 listNews.add(News(i, title, imageLink, date, linkToNews))
             }
 

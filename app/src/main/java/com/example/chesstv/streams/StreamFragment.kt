@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -12,13 +11,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chesstv.R
 import com.example.chesstv.screens.WatchStreamFragment
-import com.example.chesstv.streams.StreamAdapter
-import com.example.chesstv.streams.Streams
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import java.util.*
-import kotlin.concurrent.schedule
 
 
 class StreamFragment: Fragment(R.layout.fragment_stream), StreamAdapter.MyClickListener {
@@ -29,7 +24,12 @@ class StreamFragment: Fragment(R.layout.fragment_stream), StreamAdapter.MyClickL
         savedInstanceState: Bundle?
     ): View? {
 
-        val view = inflater.inflate(R.layout.fragment_stream, container, false)
+        return inflater.inflate(R.layout.fragment_stream, container, false)
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val streamsRecyclerView: RecyclerView = view.findViewById(R.id.streams_recycler_view)
 
@@ -45,9 +45,6 @@ class StreamFragment: Fragment(R.layout.fragment_stream), StreamAdapter.MyClickL
 
         streamsRecyclerView.layoutManager = LinearLayoutManager(context)
         streamsRecyclerView.adapter = StreamAdapter(listOfStreams, this)
-
-        return view
-
     }
 
     fun delay() = runBlocking { // this: CoroutineScope

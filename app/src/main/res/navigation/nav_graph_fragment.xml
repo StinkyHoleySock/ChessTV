@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.chesstv.screens.HomeFragment"
-        android:label="Главная" />
+        android:label="Главная" >
+        <action
+            android:id="@+id/action_homeFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.example.chesstv.screens.FavoriteFragment"
@@ -27,5 +31,21 @@
     <fragment
         android:id="@+id/watchStreamFragment"
         android:name="com.example.chesstv.screens.WatchStreamFragment"
-        android:label="WatchStreamFragment" />
+        android:label="WatchStreamFragment" >
+        <action
+            android:id="@+id/action_watchStreamFragment_to_streamFragment2"
+            app:destination="@id/streamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="com.example.chesstv.screens.NewsDetailsFragment"
+        android:label="NewsDetailsFragment" >
+        <argument
+            android:name="link"
+            app:argType="string"
+            android:defaultValue='""' />
+        <action
+            android:id="@+id/action_newsDetailsFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

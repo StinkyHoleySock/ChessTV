@@ -3,8 +3,12 @@ package com.example.chesstv.news
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.os.bundleOf
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chesstv.R
+import com.example.chesstv.screens.HomeFragment
+import com.example.chesstv.screens.NewsDetailsFragment
 import com.squareup.picasso.Picasso
 
 class NewsHolder(view: View): RecyclerView.ViewHolder(view){
@@ -12,6 +16,16 @@ class NewsHolder(view: View): RecyclerView.ViewHolder(view){
     private val textTitle: TextView = itemView.findViewById(R.id.tv_news_title)
     private val date: TextView = itemView.findViewById(R.id.tv_date)
     private val imageTitle: ImageView = itemView.findViewById(R.id.iv_news_title)
+    private var link = "link"
+
+    init {
+        itemView.setOnClickListener {
+           itemView.findNavController().navigate(
+               R.id.action_homeFragment_to_newsDetailsFragment,
+               bundleOf(NewsDetailsFragment.newsKey to link)
+           )
+        }
+    }
 
     fun bind(news: News) {
 
@@ -21,6 +35,8 @@ class NewsHolder(view: View): RecyclerView.ViewHolder(view){
         Picasso.with(itemView.context)
             .load(news.imageLink)
             .into(imageTitle)
+
+        link = news.linkDetails
     }
 
 }

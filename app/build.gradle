@@ -81,6 +81,9 @@ dependencies {
     //
     implementation "androidx.fragment:fragment-ktx:1.4.1"
 
+    //skeleton layout
+    implementation 'com.faltenreich:skeletonlayout:<version>'
+
 
 
     testImplementation 'junit:junit:4.13.2'

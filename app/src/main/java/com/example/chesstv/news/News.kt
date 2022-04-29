@@ -5,5 +5,5 @@ data class News (
     val title: String,
     val imageLink: String,
     val date: String,
-    val linkToNews: String
+    val linkDetails: String
     )
