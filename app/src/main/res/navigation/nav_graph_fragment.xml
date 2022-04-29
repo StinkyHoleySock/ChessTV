@@ -19,7 +19,11 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.chesstv.screens.ProfileFragment"
-        android:label="Профиль" />
+        android:label="Профиль" >
+        <action
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/streamFragment"
         android:name="com.example.chesstv.streams.StreamFragment"
@@ -38,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/newsDetailsFragment"
-        android:name="com.example.chesstv.screens.NewsDetailsFragment"
+        android:name="com.example.chesstv.news.NewsDetailsFragment"
         android:label="NewsDetailsFragment" >
         <argument
             android:name="link"
@@ -48,4 +52,8 @@
             android:id="@+id/action_newsDetailsFragment_to_homeFragment2"
             app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.chesstv.screens.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>

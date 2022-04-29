@@ -1,4 +1,4 @@
-package com.example.chesstv.screens
+package com.example.chesstv.news
 
 import android.os.Bundle
 import android.util.Log
@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.example.chesstv.R
 import com.example.chesstv.databinding.FragmentNewsDetailsBinding
-import com.squareup.picasso.Picasso
 import kotlinx.coroutines.*
 import org.jsoup.Jsoup
 import java.io.IOException
@@ -28,6 +28,8 @@ class NewsDetailsFragment: Fragment(R.layout.fragment_news_details), CoroutineSc
     ): View {
 
         binding = FragmentNewsDetailsBinding.inflate(inflater, container, false)
+        binding.shimmerFrameLayout.startShimmerAnimation()
+//        binding.newsContainer.visibility = View.GONE
         return binding.root
     }
 
@@ -37,6 +39,7 @@ class NewsDetailsFragment: Fragment(R.layout.fragment_news_details), CoroutineSc
         job = launch(Dispatchers.IO) {
             getData()
         }
+
     }
 
     private fun getData() {
@@ -59,9 +62,10 @@ class NewsDetailsFragment: Fragment(R.layout.fragment_news_details), CoroutineSc
             job = launch {
                 binding.newsDetailsTitle.text = title.toString()
                 binding.newsDetailsDescription.text = description.toString()
-                Picasso.with(activity)
-                    ?.load(imageLink)
-                    ?.into(binding.newsDetailsImage)
+                Glide.with(this@NewsDetailsFragment)
+                    .load(imageLink)
+                    .into(binding.newsDetailsImage)
+                binding.shimmerFrameLayout.stopShimmerAnimation()
             }
 
         } catch (e: IOException) {

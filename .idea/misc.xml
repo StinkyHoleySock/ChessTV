@@ -14,6 +14,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.359375" />
         <entry key="app/src/main/res/layout/comment_item.xml" value="0.5" />
         <entry key="app/src/main/res/layout/custom_profile_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/data_placeholder_layout.xml" value="0.359375" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.35733695652173914" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.35733695652173914" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35733695652173914" />

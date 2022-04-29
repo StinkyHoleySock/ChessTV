@@ -59,6 +59,7 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
         override fun onBindViewHolder(holder: ProfileItemHolder, position: Int) {
             val item = items[position]
             holder.itemTextView.text = item
+
         }
 
         override fun getItemCount() = items.size

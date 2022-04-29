@@ -6,10 +6,8 @@ import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.chesstv.R
-import com.example.chesstv.screens.HomeFragment
-import com.example.chesstv.screens.NewsDetailsFragment
-import com.squareup.picasso.Picasso
 
 class NewsHolder(view: View): RecyclerView.ViewHolder(view){
 
@@ -32,7 +30,7 @@ class NewsHolder(view: View): RecyclerView.ViewHolder(view){
         textTitle.text = news.title
         date.text = news.date
 
-        Picasso.with(itemView.context)
+        Glide.with(itemView.context)
             .load(news.imageLink)
             .into(imageTitle)
 

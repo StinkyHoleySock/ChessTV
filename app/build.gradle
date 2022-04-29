@@ -81,8 +81,8 @@ dependencies {
     //
     implementation "androidx.fragment:fragment-ktx:1.4.1"
 
-    //skeleton layout
-    implementation 'com.faltenreich:skeletonlayout:<version>'
+    //skeleton
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
 
 
 

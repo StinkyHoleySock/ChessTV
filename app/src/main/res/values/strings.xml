@@ -41,5 +41,6 @@
     <string name="privacy">Приватность</string>
     <string name="dark_theme">Тёмная тема</string>
     <string name="no_notifications">Не беспокоить</string>
+    <string name="empty">\n\n</string>
 
 </resources>
