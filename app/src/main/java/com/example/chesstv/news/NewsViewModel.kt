@@ -1,15 +1,26 @@
 package com.example.chesstv.news
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.chesstv.model.News
+import com.example.chesstv.model.NewsService
+import kotlinx.coroutines.launch
 
-private val listNews = mutableListOf<News>()
-private lateinit var adapter: NewsAdapter
+class NewsViewModel(
+    private val newsService: NewsService
+): ViewModel() {
 
-class NewsViewModel: ViewModel() {
+    private val _news = MutableLiveData<List<News>>()
+    val news: LiveData<List<News>> = _news
 
-    /* Во viewModel необходимо
-    создать фукнцию для получения данных.
-    Функция лежит во фрагменте, надо бы её сюда.
-     */
+    init {
+        viewModelScope.launch {
+            newsService.loadNews()
+        }
+    }
+
+
 
 }

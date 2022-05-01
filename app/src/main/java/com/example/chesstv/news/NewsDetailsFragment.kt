@@ -29,7 +29,7 @@ class NewsDetailsFragment: Fragment(R.layout.fragment_news_details), CoroutineSc
 
         binding = FragmentNewsDetailsBinding.inflate(inflater, container, false)
         binding.shimmerFrameLayout.startShimmerAnimation()
-//        binding.newsContainer.visibility = View.GONE
+
         return binding.root
     }
 

@@ -6,4 +6,4 @@ data class Streams (
     val description: String,
     val image: Int,
     val streamer: Int
-    )
+)

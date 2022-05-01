@@ -6,9 +6,6 @@ import androidx.lifecycle.ViewModel
 import com.example.chesstv.model.Comment
 import com.example.chesstv.model.CommentsListener
 import com.example.chesstv.model.CommentsService
-import com.example.chesstv.screens.adapter
-import java.util.*
-import kotlin.concurrent.timerTask
 
 class CommentsViewModel(
     private val commentsService: CommentsService

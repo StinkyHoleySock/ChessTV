@@ -25,9 +25,9 @@
                 android:id="@+id/iv_news_title"
                 android:layout_width="match_parent"
                 android:layout_height="192dp"
-                android:src="@drawable/ic_example_avatar"
+                android:layout_alignParentTop="true"
                 android:scaleType="centerCrop"
-                android:layout_alignParentTop="true"/>
+                android:src="@drawable/ic_example_avatar" />
 
             <TextView
                 android:id="@+id/tv_news_title"

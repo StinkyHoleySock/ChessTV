@@ -1,4 +1,4 @@
-package com.example.chesstv.news
+package com.example.chesstv.model
 
 data class News (
     val id: Int,
@@ -6,4 +6,4 @@ data class News (
     val imageLink: String,
     val date: String,
     val linkDetails: String
-    )
+)

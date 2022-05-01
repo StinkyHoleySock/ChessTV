@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/news"
         android:icon="@drawable/ic_outline_home_24"
         android:title="@string/homepage"/>
 
     <item
-        android:id="@+id/streamFragment"
+        android:id="@+id/streams"
         android:icon="@drawable/ic_outline_videocam_24"
         android:title="@string/streams"/>
 
@@ -17,7 +17,7 @@
         android:title="@string/favorite"/>
 
     <item
-        android:id="@+id/profileFragment"
+        android:id="@+id/settings"
         android:icon="@drawable/ic_outline_account_circle_24"
         android:title="@string/profile"/>
 

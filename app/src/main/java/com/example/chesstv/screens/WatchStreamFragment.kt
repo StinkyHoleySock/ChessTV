@@ -21,7 +21,6 @@ import com.example.chesstv.model.CommentsListener
 import com.example.chesstv.model.CommentsService
 import com.example.chesstv.model.Comment
 
-
 class WatchStreamFragment: Fragment(R.layout.fragment_watch_stream){
 
     private lateinit var adapter: CommentAdapter
@@ -70,9 +69,10 @@ class WatchStreamFragment: Fragment(R.layout.fragment_watch_stream){
 
         binding.commentRecyclerView.layoutManager = LinearLayoutManager(context)
         binding.commentRecyclerView.adapter = adapter
+
         commentsService.addListener(usersListener)
 
-
+        // TODO EXOPLAYER
         //Часть с VideoView
         val videoView = view.findViewById<VideoView>(R.id.vv_stream)
         // Инициализация видео. В реальном проекте будут парситься ссылки на ресурс

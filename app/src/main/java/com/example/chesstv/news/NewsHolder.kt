@@ -8,6 +8,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.chesstv.R
+import com.example.chesstv.model.News
 
 class NewsHolder(view: View): RecyclerView.ViewHolder(view){
 

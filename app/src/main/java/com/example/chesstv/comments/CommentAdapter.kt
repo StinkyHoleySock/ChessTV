@@ -42,6 +42,7 @@ class CommentAdapter(
     override fun onBindViewHolder(holder: CommentViewHolder, position: Int) {
         val user = comments[position]
         with(holder.binding) {
+
             holder.itemView.tag = user
             imageMore.tag = user
 

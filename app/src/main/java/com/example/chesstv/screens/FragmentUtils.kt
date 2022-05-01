@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.chesstv.App
+import com.example.chesstv.news.NewsViewModel
 import java.lang.IllegalStateException
 
 class ViewModelFactory(private val app: App) : ViewModelProvider.Factory {
@@ -13,6 +14,9 @@ class ViewModelFactory(private val app: App) : ViewModelProvider.Factory {
         val viewModel = when (modelClass) {
             CommentsViewModel::class.java -> {
                 CommentsViewModel(app.commentsService)
+            }
+            NewsViewModel::class.java -> {
+                NewsViewModel(app.newsService)
             }
             else -> {
                 throw IllegalStateException("Unknown view model class")
