@@ -32,6 +32,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>(){
         val itemNews = news[position]
         with(holder.binding) {
 
+
             tvNewsTitle.text = itemNews.title
             tvDate.text = itemNews.date
             var link = itemNews.linkDetails
@@ -39,7 +40,16 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>(){
             Glide.with(ivNewsTitle.context)
                 .load(itemNews.imageLink)
                 .into(ivNewsTitle)
+
+            this.tvReadMore.setOnClickListener {
+                tvReadMore.findNavController().navigate(
+                    R.id.action_homeFragment_to_newsDetailsFragment,
+                    bundleOf(NewsDetailsFragment.newsKey to link)
+                )
+            }
         }
+
+
     }
 
     override fun getItemCount() = news.size
@@ -47,9 +57,5 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>(){
     class NewsViewHolder(
         val binding: NewsItemBinding
         ) : RecyclerView.ViewHolder(binding.root)
-
-    interface MyOnClickListener {
-        fun onClick(link: String)
-    }
 
 }

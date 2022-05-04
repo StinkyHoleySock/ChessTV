@@ -23,7 +23,7 @@ import com.example.chesstv.news.NewsViewModel
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class HomeFragment: Fragment(R.layout.fragment_home), NewsAdapter.MyOnClickListener {
+class HomeFragment: Fragment(R.layout.fragment_home) {
 
     private lateinit var adapter: NewsAdapter
     private lateinit var binding: FragmentHomeBinding
@@ -62,13 +62,5 @@ class HomeFragment: Fragment(R.layout.fragment_home), NewsAdapter.MyOnClickListe
 
         newsService.addListener(usersListener)
     }
-
-    override fun onClick(link: String) {
-        findNavController().navigate(
-            R.id.action_homeFragment_to_newsDetailsFragment,
-            bundleOf(NewsDetailsFragment.newsKey to link)
-        )
-    }
-
 
 }

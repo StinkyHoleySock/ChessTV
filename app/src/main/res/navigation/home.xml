@@ -10,6 +10,10 @@
         <action
             android:id="@+id/action_homeFragment_to_newsDetailsFragment"
             app:destination="@id/newsDetailsFragment" />
+        <argument
+            android:name="link"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/newsDetailsFragment"
