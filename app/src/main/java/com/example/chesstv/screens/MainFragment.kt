@@ -16,18 +16,29 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainFragment: Fragment(R.layout.fragment_main) {
 
+    private lateinit var binding: FragmentMainBinding
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bottomNavigationView = view.findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        binding = FragmentMainBinding.bind(view)
 
-        val navController = (childFragmentManager.findFragmentById(R.id.fragment_container_view)
-                as NavHostFragment).navController
+        val navHost = childFragmentManager.findFragmentById(R.id.fragment_container_view)
+            as NavHostFragment
 
+        val navController = navHost.navController
 
-        NavigationUI.setupWithNavController(bottomNavigationView, navController)
+        NavigationUI.setupWithNavController(binding.bottomNavigation, navController)
 
-        //bottomNavigationView?.setupWithNavController(navController)
+//        val bottomNavigationView = view.findViewById<BottomNavigationView>(R.id.bottom_navigation)
+//
+//        val navController = (childFragmentManager.findFragmentById(R.id.fragment_container_view)
+//                as NavHostFragment).navController
+//
+//
+//        NavigationUI.setupWithNavController(bottomNavigationView, navController)
+//
+//        //bottomNavigationView?.setupWithNavController(navController)
     }
 }

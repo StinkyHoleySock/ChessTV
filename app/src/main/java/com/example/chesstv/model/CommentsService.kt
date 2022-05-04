@@ -67,8 +67,7 @@ class CommentsService {
             "https://avatarko.ru/img/kartinka/16/film_gnom_15452.jpg",
             "https://avatarko.ru/img/kartinka/15/film_gnom_14558.jpg",
             "https://avatarko.ru/img/kartinka/11/film_muzhchina_galstuk_10235.jpg",
-            "https://avatarko.ru/img/kartinka/11/film_elf_Middle-earth_Arwen_10847.jpg",
-            ""
+            "https://avatarko.ru/img/kartinka/11/film_elf_Middle-earth_Arwen_10847.jpg"
         )
     }
 }

@@ -47,12 +47,6 @@ class StreamFragment: Fragment(R.layout.fragment_stream), StreamAdapter.MyClickL
         streamsRecyclerView.adapter = StreamAdapter(listOfStreams, this)
     }
 
-    fun delay() = runBlocking { // this: CoroutineScope
-        launch { // launch a new coroutine and continue
-            delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
-            println("World!") // print after delay
-        }
-    }
 
     override fun onClick(position: Int) {
         findNavController().navigate(

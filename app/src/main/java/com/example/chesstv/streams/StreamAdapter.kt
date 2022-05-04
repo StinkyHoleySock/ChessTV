@@ -21,7 +21,6 @@ class StreamAdapter(private val streams: MutableList<Streams>, val listener: MyC
                 val position = adapterPosition
                 listener.onClick(position)
             }
-
         }
     }
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/streams"
+    app:startDestination="@id/streamFragment">
+
+    <fragment
+        android:id="@+id/streamFragment"
+        android:name="com.example.chesstv.streams.StreamFragment"
+        android:label="StreamFragment" >
+        <action
+            android:id="@+id/action_streamFragment_to_watchStreamFragment"
+            app:destination="@id/watchStreamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/watchStreamFragment"
+        android:name="com.example.chesstv.screens.WatchStreamFragment"
+        android:label="WatchStreamFragment" />
+</navigation>

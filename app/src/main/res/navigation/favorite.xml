@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/favorite"
+    app:startDestination="@id/favoriteFragment2">
+
+    <fragment
+        android:id="@+id/favoriteFragment2"
+        android:name="com.example.chesstv.screens.FavoriteFragment"
+        android:label="FavoriteFragment" />
+</navigation>

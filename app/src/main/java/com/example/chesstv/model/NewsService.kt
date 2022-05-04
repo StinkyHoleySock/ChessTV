@@ -1,9 +1,6 @@
 package com.example.chesstv.model
 
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import okhttp3.internal.notifyAll
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
@@ -18,9 +15,9 @@ class NewsService {
     private var isLoaded = false
     private val listeners = mutableSetOf<NewsListener>()
 
-    fun loadNews(): MutableList<News> {
+    suspend fun loadNews(): MutableList<News> {
 
-        CoroutineScope(Dispatchers.IO).launch {
+        withContext(Dispatchers.IO) {
 
             val url = "https://ria.ru/chess/"
             val doc: Document = Jsoup.connect(url).get()

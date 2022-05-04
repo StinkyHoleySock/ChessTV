@@ -44,6 +44,7 @@ class NewsDetailsFragment: Fragment(R.layout.fragment_news_details), CoroutineSc
 
     private fun getData() {
         try {
+
             val document = Jsoup.connect(arguments?.getString(newsKey)).get()
             val elements = document.select("div[class=endless__item-content page__width]")
 

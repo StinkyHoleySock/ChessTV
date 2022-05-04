@@ -16,7 +16,7 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         val binding = FragmentRegisterBinding.inflate(inflater, container, false)
 
