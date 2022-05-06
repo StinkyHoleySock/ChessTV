@@ -1,4 +1,4 @@
-package com.example.chesstv.news
+package com.example.chesstv.screens.news
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,8 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.chesstv.R
 import com.example.chesstv.databinding.NewsItemBinding
 import com.example.chesstv.model.News
-import com.example.chesstv.screens.HomeFragment
-import com.example.chesstv.streams.StreamAdapter
+import com.example.chesstv.screens.news.details.NewsDetailsFragment
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>(){
 
@@ -29,22 +28,22 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        val itemNews = news[position]
-        with(holder.binding) {
 
+        val itemNews = news[position]
+
+        with(holder.binding) {
 
             tvNewsTitle.text = itemNews.title
             tvDate.text = itemNews.date
-            var link = itemNews.linkDetails
 
             Glide.with(ivNewsTitle.context)
                 .load(itemNews.imageLink)
                 .into(ivNewsTitle)
 
-            this.tvReadMore.setOnClickListener {
-                tvReadMore.findNavController().navigate(
+            this.cardView.setOnClickListener {
+                cardView.findNavController().navigate(
                     R.id.action_homeFragment_to_newsDetailsFragment,
-                    bundleOf(NewsDetailsFragment.newsKey to link)
+                    bundleOf(NewsDetailsFragment.newsKey to itemNews.linkDetails)
                 )
             }
         }

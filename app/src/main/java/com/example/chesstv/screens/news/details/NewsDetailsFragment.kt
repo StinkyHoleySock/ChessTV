@@ -1,4 +1,4 @@
-package com.example.chesstv.news
+package com.example.chesstv.screens.news.details
 
 import android.os.Bundle
 import android.util.Log
@@ -61,11 +61,20 @@ class NewsDetailsFragment: Fragment(R.layout.fragment_news_details), CoroutineSc
                 .text()
 
             job = launch {
-                binding.newsDetailsTitle.text = title.toString()
+
+                if (title.isNotEmpty()) {
+                    binding.newsDetailsTitle.text = title.toString()
+                }
+                else binding.newsDetailsTitle.visibility = View.GONE
+
                 binding.newsDetailsDescription.text = description.toString()
-                Glide.with(this@NewsDetailsFragment)
-                    .load(imageLink)
-                    .into(binding.newsDetailsImage)
+
+                activity?.let {
+                    Glide.with(it)
+                        .load(imageLink)
+                        .into(binding.newsDetailsImage)
+                }
+
                 binding.shimmerFrameLayout.stopShimmerAnimation()
             }
 

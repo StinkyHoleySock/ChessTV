@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.chesstv.screens.ProfileFragment"
+        android:name="com.example.chesstv.screens.profile.ProfileFragment"
         android:label="ProfileFragment" >
         <action
             android:id="@+id/action_profileFragment_to_settingsFragment"
@@ -14,6 +14,6 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.chesstv.screens.SettingsFragment"
+        android:name="com.example.chesstv.screens.profile.SettingsFragment"
         android:label="SettingsFragment" />
 </navigation>

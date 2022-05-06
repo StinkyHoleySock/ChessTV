@@ -7,7 +7,7 @@ import org.jsoup.nodes.Document
 import org.jsoup.select.Elements
 import java.io.IOException
 
-typealias NewsListener = (comment: List<News>) -> Unit
+typealias NewsListener = (news_item: List<News>) -> Unit
 
 class NewsService {
 
@@ -38,6 +38,7 @@ class NewsService {
                 val linkToNews = news.select("a.list-item__title.color-font-hover-only")
                     .eq(i)
                     .attr("href")
+
                 listNews.add(News(i, title, imageLink, date, linkToNews))
             }
         }

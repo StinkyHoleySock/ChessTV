@@ -1,4 +1,4 @@
-package com.example.chesstv.comments
+package com.example.chesstv.screens.watch_streams
 
 import android.view.LayoutInflater
 import android.view.Menu

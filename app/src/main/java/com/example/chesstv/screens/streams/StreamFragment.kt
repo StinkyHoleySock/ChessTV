@@ -1,4 +1,4 @@
-package com.example.chesstv.streams
+package com.example.chesstv.screens.streams
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,10 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chesstv.R
-import com.example.chesstv.screens.WatchStreamFragment
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import com.example.chesstv.screens.watch_streams.WatchStreamFragment
 
 
 class StreamFragment: Fragment(R.layout.fragment_stream), StreamAdapter.MyClickListener {

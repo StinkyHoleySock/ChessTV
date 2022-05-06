@@ -1,4 +1,4 @@
-package com.example.chesstv.news
+package com.example.chesstv.screens.news
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

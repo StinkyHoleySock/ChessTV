@@ -1,74 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/title_view"
         android:layout_width="wrap_content"
-        android:layout_height="216dp"
-        android:background="@drawable/titleshape"
+        android:layout_height="248dp"
+        android:background="@drawable/title_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
+    <ImageView
         android:id="@+id/image_container"
-        android:layout_width="104dp"
-        android:layout_height="104dp"
-        android:layout_centerHorizontal="true"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginTop="16dp"
-        android:elevation="12dp"
-        app:cardCornerRadius="50dp"
-        app:layout_constraintEnd_toEndOf="@+id/title_view"
-        app:layout_constraintStart_toStartOf="@id/title_view"
-        app:layout_constraintTop_toTopOf="@id/title_view">
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_example_avatar" />
-
-    </androidx.cardview.widget.CardView>
+        android:src="@drawable/ic_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/raleway_bold"
         android:text="@string/user_name"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:layout_marginTop="8dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/title_view"
         app:layout_constraintStart_toStartOf="@id/title_view"
         app:layout_constraintTop_toBottomOf="@id/image_container" />
 
-    <TextView
-        android:id="@+id/tv_user_description"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/raleway_light"
-        android:text="@string/user_description"
-        android:textColor="@color/white"
-        android:textSize="17sp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@id/title_view"
-        app:layout_constraintStart_toStartOf="@id/title_view"
-        app:layout_constraintTop_toBottomOf="@id/tv_username" />
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/tv_username"
+        app:layout_constraintStart_toStartOf="@+id/tv_username"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username"
+        tools:ignore="UseCompoundDrawables">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_place" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_light"
+            android:text="@string/user_place"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/title_view"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/title_view">
+
+        <LinearLayout
+            android:id="@+id/messages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_messages"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/raleway_light"
+                android:textColor="@color/black"
+                android:text="@string/privacy"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_profile"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/raleway_light"
+                android:textColor="@color/black"
+                android:text="@string/profile"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/confidentiality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_confidentiality"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/raleway_light"
+                android:textColor="@color/black"
+                android:text="@string/confidentiality"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/subscriptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_subscriptions"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/raleway_light"
+                android:textColor="@color/black"
+                android:text="@string/subscriptions"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/statistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_statistics"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/raleway_light"
+                android:textColor="@color/black"
+                android:text="@string/statistics"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_settings"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/raleway_light"
+                android:textColor="@color/black"
+                android:text="@string/settings"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_arrow" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

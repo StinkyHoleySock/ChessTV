@@ -4,7 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.chesstv.App
-import com.example.chesstv.news.NewsViewModel
+import com.example.chesstv.screens.news.NewsViewModel
+import com.example.chesstv.screens.watch_streams.CommentsViewModel
 import java.lang.IllegalStateException
 
 class ViewModelFactory(private val app: App) : ViewModelProvider.Factory {

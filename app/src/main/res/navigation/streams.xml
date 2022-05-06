@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/streamFragment"
-        android:name="com.example.chesstv.streams.StreamFragment"
+        android:name="com.example.chesstv.screens.streams.StreamFragment"
         android:label="StreamFragment" >
         <action
             android:id="@+id/action_streamFragment_to_watchStreamFragment"
@@ -14,6 +14,6 @@
     </fragment>
     <fragment
         android:id="@+id/watchStreamFragment"
-        android:name="com.example.chesstv.screens.WatchStreamFragment"
+        android:name="com.example.chesstv.screens.watch_streams.WatchStreamFragment"
         android:label="WatchStreamFragment" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.chesstv.screens
+package com.example.chesstv.screens.watch_streams
 
 import android.net.Uri
 import android.os.Bundle
@@ -14,12 +14,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chesstv.App
 import com.example.chesstv.R
-import com.example.chesstv.comments.CommentActionListener
-import com.example.chesstv.comments.CommentAdapter
 import com.example.chesstv.databinding.FragmentWatchStreamBinding
 import com.example.chesstv.model.CommentsListener
 import com.example.chesstv.model.CommentsService
 import com.example.chesstv.model.Comment
+import com.example.chesstv.screens.factory
 
 class WatchStreamFragment: Fragment(R.layout.fragment_watch_stream){
 

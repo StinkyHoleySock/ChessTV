@@ -1,4 +1,4 @@
-package com.example.chesstv.screens
+package com.example.chesstv.screens.profile
 
 import androidx.fragment.app.Fragment
 import com.example.chesstv.R

@@ -1,4 +1,4 @@
-package com.example.chesstv.streams
+package com.example.chesstv.screens.streams
 
 data class Streams (
     val id: Int,
