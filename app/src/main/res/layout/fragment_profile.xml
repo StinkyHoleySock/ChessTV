@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:backgroundTint="?android:colorBackground">
 
     <View
         android:id="@+id/title_view"
@@ -92,7 +93,7 @@
                 android:layout_height="24dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/raleway_light"
-                android:textColor="@color/black"
+                android:textColor="?android:textColorPrimary"
                 android:text="@string/privacy"
                 android:textSize="20sp"/>
 
@@ -121,7 +122,7 @@
                 android:layout_height="24dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/raleway_light"
-                android:textColor="@color/black"
+                android:textColor="?android:textColorPrimary"
                 android:text="@string/profile"
                 android:textSize="20sp"/>
 
@@ -150,7 +151,7 @@
                 android:layout_height="24dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/raleway_light"
-                android:textColor="@color/black"
+                android:textColor="?android:textColorPrimary"
                 android:text="@string/confidentiality"
                 android:textSize="20sp"/>
 
@@ -179,7 +180,7 @@
                 android:layout_height="24dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/raleway_light"
-                android:textColor="@color/black"
+                android:textColor="?android:textColorPrimary"
                 android:text="@string/subscriptions"
                 android:textSize="20sp"/>
 
@@ -208,7 +209,7 @@
                 android:layout_height="24dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/raleway_light"
-                android:textColor="@color/black"
+                android:textColor="?android:textColorPrimary"
                 android:text="@string/statistics"
                 android:textSize="20sp"/>
 
@@ -237,7 +238,7 @@
                 android:layout_height="24dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/raleway_light"
-                android:textColor="@color/black"
+                android:textColor="?android:textColorPrimary"
                 android:text="@string/settings"
                 android:textSize="20sp"/>
 

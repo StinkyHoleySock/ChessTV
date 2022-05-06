@@ -84,6 +84,10 @@ dependencies {
     //skeleton
     implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
 
+    // Shared Preferences
+    implementation "androidx.preference:preference-ktx:1.2.0"
+
+
 
 
     testImplementation 'junit:junit:4.13.2'

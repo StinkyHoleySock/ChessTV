@@ -16,16 +16,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <androidx.cardview.widget.CardView
+    <ImageView
         android:id="@+id/image_container"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/my_palette_3"
-        android:elevation="12dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:cardCornerRadius="50dp"
+        android:src="@drawable/ic_avatar"
         app:layout_constraintStart_toStartOf="@+id/iv_preview"
         app:layout_constraintTop_toBottomOf="@+id/iv_preview" />
 
@@ -36,7 +33,7 @@
         android:layout_marginStart="8dp"
         android:fontFamily="@font/raleway_bold"
         android:text="@string/title_of_the_video"
-        android:textColor="@color/black"
+        android:textColor="?android:textColorPrimary"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/image_container"
         app:layout_constraintTop_toTopOf="@+id/image_container" />
@@ -47,7 +44,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/raleway_light"
         android:text="@string/short_description"
-        android:textColor="#000000"
+        android:textColor="?android:textColorPrimary"
         android:textSize="12sp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"

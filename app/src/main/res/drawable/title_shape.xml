@@ -7,7 +7,7 @@
         android:bottomRightRadius="125dp"
         />
     <solid
-        android:color="@color/my_palette_2"
+        android:color="@color/my_palette_1"
         />
 
 

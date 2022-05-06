@@ -12,4 +12,6 @@
     <color name="my_palette_3">#F2BE8D</color>
     <color name="my_palette_3_2">#60F2BE8D</color>
     <color name="my_palette_4">#BA6C65</color>
+    <color name="appBar">#090a1b</color>
+    <color name="textColor">#CCFFFFFF</color>
 </resources>

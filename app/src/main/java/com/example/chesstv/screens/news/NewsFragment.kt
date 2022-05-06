@@ -9,15 +9,15 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chesstv.App
 import com.example.chesstv.R
-import com.example.chesstv.databinding.FragmentHomeBinding
+import com.example.chesstv.databinding.FragmentNewsBinding
 import com.example.chesstv.model.NewsListener
 import com.example.chesstv.model.NewsService
 import com.example.chesstv.screens.factory
 
-class NewsFragment: Fragment(R.layout.fragment_home) {
+class NewsFragment: Fragment(R.layout.fragment_news) {
 
     private lateinit var adapter: NewsAdapter
-    private lateinit var binding: FragmentHomeBinding
+    private lateinit var binding: FragmentNewsBinding
 
     private val viewModel: NewsViewModel by viewModels{ factory() }
 
@@ -30,8 +30,7 @@ class NewsFragment: Fragment(R.layout.fragment_home) {
         savedInstanceState: Bundle?
     ): View {
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
-
+        binding = FragmentNewsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
