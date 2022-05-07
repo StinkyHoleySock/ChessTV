@@ -2,11 +2,12 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/home"
+    android:label="Главная"
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.chesstv.screens.news.NewsFragment"
-        android:label="HomeFragment" >
+        android:label="Главная">
         <action
             android:id="@+id/action_homeFragment_to_newsDetailsFragment"
             app:destination="@id/newsDetailsFragment" />
@@ -18,5 +19,5 @@
     <fragment
         android:id="@+id/newsDetailsFragment"
         android:name="com.example.chesstv.screens.news.details.NewsDetailsFragment"
-        android:label="NewsDetailsFragment" />
+        android:label="Новости" />
 </navigation>
