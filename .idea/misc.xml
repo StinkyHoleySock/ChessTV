@@ -35,6 +35,7 @@
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.359375" />
         <entry key="app/src/main/res/layout/fragment_stream.xml" value="0.35733695652173914" />
         <entry key="app/src/main/res/layout/fragment_streamer.xml" value="0.35733695652173914" />
+        <entry key="app/src/main/res/layout/fragment_user_profile.xml" value="0.359375" />
         <entry key="app/src/main/res/layout/fragment_watch_stream.xml" value="0.35733695652173914" />
         <entry key="app/src/main/res/layout/news_item.xml" value="0.359375" />
         <entry key="app/src/main/res/layout/stream_item.xml" value="0.359375" />

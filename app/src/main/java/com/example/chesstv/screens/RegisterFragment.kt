@@ -12,6 +12,8 @@ import com.example.chesstv.databinding.FragmentRegisterBinding
 
 class RegisterFragment: Fragment(R.layout.fragment_register) {
 
+    private lateinit var binding: FragmentRegisterBinding
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -21,9 +23,20 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
         val binding = FragmentRegisterBinding.inflate(inflater, container, false)
 
         binding.btnRegister.setOnClickListener {
-            //findNavController().navigate(R.id.action_registerFragment_to_mainFragment2)
+            findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
+        }
+        binding.tvBtnLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
 
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+
+
     }
 }
