@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
-import com.example.chesstv.screens.profile.SettingPreferences
+import com.example.chesstv.screens.profile.settings.SettingPreferences
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("UseCompatLoadingForDrawables")

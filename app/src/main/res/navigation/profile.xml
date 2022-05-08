@@ -11,9 +11,27 @@
         <action
             android:id="@+id/action_profileFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_fragmentEmpty"
+            app:destination="@id/fragmentEmpty" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.chesstv.screens.profile.SettingsFragment"
-        android:label="Настройки" />
+        android:name="com.example.chesstv.screens.profile.settings.SettingsFragment"
+        android:label="Настройки" >
+        <action
+            android:id="@+id/action_settingsFragment_to_fragmentEmpty"
+            app:destination="@id/fragmentEmpty" />
+        <action
+            android:id="@+id/action_settingsFragment_to_fragmentProfileData"
+            app:destination="@id/fragmentProfileData" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEmpty"
+        android:name="com.example.chesstv.screens.profile.FragmentEmpty"
+        android:label="Нет данных" />
+    <fragment
+        android:id="@+id/fragmentProfileData"
+        android:name="com.example.chesstv.screens.profile.settings.FragmentProfileData"
+        android:label="Данные профиля" />
 </navigation>

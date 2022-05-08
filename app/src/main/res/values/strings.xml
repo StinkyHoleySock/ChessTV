@@ -4,6 +4,7 @@
     <string name="title_register">Создать аккаунт на ChessTV</string>
     <string name="name">Имя</string>
     <string name="surname">Фамилия</string>
+    <string name="city">Город</string>
     <string name="email">Email</string>
     <string name="password">Пароль</string>
     <string name="confirm_password">Подтвердите пароль</string>
@@ -48,6 +49,9 @@
     <string name="subscriptions">Подписки</string>
     <string name="statistics">Статистика</string>
     <string name="settings">Настройки</string>
+    <string name="no_data">Нет данных</string>
+    <string name="user_avatar">User avatar</string>
+    <string name="save">Сохранить данные</string>
 
 
 </resources>

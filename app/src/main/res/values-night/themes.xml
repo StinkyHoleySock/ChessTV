@@ -20,6 +20,8 @@
         <item name="backgroundTint">@color/my_palette_1</item>
         <item name="itemBackground">@color/my_palette_2</item>
         <item name="android:colorBackground">@color/my_palette_2</item>
+        <item name="android:navigationBarColor">@color/appBar</item>
+
 
 
     </style>

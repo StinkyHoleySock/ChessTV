@@ -20,6 +20,7 @@
         <item name="backgroundTint">@color/my_palette_1</item>
         <item name="itemBackground">@color/white</item>
         <item name="android:colorBackground">@color/white</item>
+        <item name="android:navigationBarColor">@color/appBar</item>
 
 
     </style>

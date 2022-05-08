@@ -1,4 +1,4 @@
-package com.example.chesstv.screens.profile
+package com.example.chesstv.screens.profile.settings
 
 import android.content.Context
 import androidx.preference.PreferenceManager
