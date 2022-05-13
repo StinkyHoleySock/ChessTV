@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -40,7 +41,7 @@ dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 
     // Navigation component
@@ -84,10 +85,13 @@ dependencies {
     //skeleton
     implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
 
-    // Shared Preferences
+    //Shared Preferences
     implementation "androidx.preference:preference-ktx:1.2.0"
 
-
+    //Firebase
+    implementation 'com.google.firebase:firebase-auth:21.0.4'
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation platform('com.google.firebase:firebase-bom:30.0.1')
 
 
     testImplementation 'junit:junit:4.13.2'

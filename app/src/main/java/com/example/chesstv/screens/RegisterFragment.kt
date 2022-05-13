@@ -4,15 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.chesstv.R
-import com.example.chesstv.databinding.FragmentLoginBinding
 import com.example.chesstv.databinding.FragmentRegisterBinding
+import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class RegisterFragment: Fragment(R.layout.fragment_register) {
 
     private lateinit var binding: FragmentRegisterBinding
+    private lateinit var auth: FirebaseAuth
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -20,14 +26,9 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
         savedInstanceState: Bundle?
     ): View {
 
-        val binding = FragmentRegisterBinding.inflate(inflater, container, false)
+        binding = FragmentRegisterBinding.inflate(inflater, container, false)
 
-        binding.btnRegister.setOnClickListener {
-            findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
-        }
-        binding.tvBtnLogin.setOnClickListener {
-            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
-        }
+        auth = Firebase.auth
 
         return binding.root
     }
@@ -35,8 +36,57 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        with(binding) {
 
+            tvBtnLogin.setOnClickListener {
+                findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+            }
 
+            btnRegister.setOnClickListener {
+
+                when {
+
+                    etName.text.toString().isEmpty() -> toast(tilName)
+
+                    etSurname.text.toString().isEmpty() -> toast(tilSurname)
+
+                    etEmail.text.toString().isEmpty() -> toast(tilEmail)
+
+                    etPassword.text.toString().isEmpty() -> toast(tilPassword)
+
+                    // TODO: accept rules
+
+                    else -> firebaseSignUp()
+
+                }
+
+            }
+        }
+    }
+
+    private fun firebaseSignUp() {
+        auth.createUserWithEmailAndPassword(
+            binding.etEmail.text.toString(),
+            binding.etPassword.text.toString()
+        ).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                // Sign in success, update UI with the signed-in user's information
+                findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
+                // TODO: bundleOf
+                //val user = auth.currentUser
+                //updateUI(user)
+            } else {
+                // If sign in fails, display a message to the user.
+                Toast.makeText(activity, "Authentication failed. ${task.exception}",
+                    Toast.LENGTH_LONG).show()
+                //updateUI(null)
+            }
+        }
 
     }
+
+    private fun toast(field: TextInputLayout) {
+        Toast.makeText(activity, "Поле '${field.hint.toString()}' не может быть пустым!", Toast.LENGTH_SHORT).show()
+    }
+
 }

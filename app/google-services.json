@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "538369332264",
+    "project_id": "chesstv-be792",
+    "storage_bucket": "chesstv-be792.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538369332264:android:11d48b196d96d6f29b911d",
+        "android_client_info": {
+          "package_name": "com.example.chesstv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538369332264-4ap19nsccf1cb70rq8dc3g3boood85o6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy5kLY-zQioxc5FLs1zYzEZo87R-shLH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538369332264-4ap19nsccf1cb70rq8dc3g3boood85o6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
