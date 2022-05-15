@@ -78,7 +78,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/ic_example_avatar"
+        android:src="@drawable/ic_avatar"
         app:layout_constraintStart_toStartOf="@+id/video_views"
         app:layout_constraintTop_toBottomOf="@+id/divider_1" />
 
@@ -101,7 +101,7 @@
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/buttonshape_unsubscribed"
-        android:backgroundTint="@color/my_palette_4"
+        app:backgroundTint="@color/my_palette_4"
         android:text="@string/subscribe"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="@+id/image_channel"
@@ -148,14 +148,15 @@
 
         <ImageView
             android:id="@+id/image_profile"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:src="@drawable/ic_avatar" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_comment"
+            android:hint="@string/write_comment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5" />

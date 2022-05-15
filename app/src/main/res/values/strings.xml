@@ -58,6 +58,7 @@
     <string name="user_email">example@gmail.com</string>
     <string name="_1">Категория</string>
     <string name="_123">123</string>
+    <string name="write_comment">Напишите комментарий...</string>
 
 
 </resources>

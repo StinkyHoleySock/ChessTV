@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.chesstv.R
 import com.example.chesstv.databinding.FragmentProfileSettingsBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class SettingsFragment: Fragment(R.layout.fragment_profile_settings) {
 
@@ -31,6 +32,7 @@ class SettingsFragment: Fragment(R.layout.fragment_profile_settings) {
 
 
         with(binding) {
+            //заглушки
             navigateToEmpty(notifications)
             navigateToEmpty(privacy)
 
@@ -46,13 +48,14 @@ class SettingsFragment: Fragment(R.layout.fragment_profile_settings) {
                 }  else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                     SettingPreferences(view.context).darkMode = 1
-
                 }
             }
+
+            tvLogout.setOnClickListener {
+                FirebaseAuth.getInstance().signOut()
+                // TODO: navigate
+            }
         }
-
-
-
     }
 
     private fun navigateToEmpty(item: LinearLayout) {

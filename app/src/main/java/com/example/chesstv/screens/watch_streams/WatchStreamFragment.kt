@@ -13,6 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chesstv.App
+import com.example.chesstv.CurrentUser
 import com.example.chesstv.R
 import com.example.chesstv.databinding.FragmentWatchStreamBinding
 import com.example.chesstv.model.CommentsListener
@@ -47,7 +48,9 @@ class WatchStreamFragment: Fragment(R.layout.fragment_watch_stream){
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        CurrentUser().loadAvatar(binding.imageProfile)
         // Установка RecyclerView
         adapter = CommentAdapter(object : CommentActionListener {
 
@@ -95,7 +98,7 @@ class WatchStreamFragment: Fragment(R.layout.fragment_watch_stream){
             start()
         }
 
-        super.onViewCreated(view, savedInstanceState)
+
     }
 
     override fun onDestroyView() {

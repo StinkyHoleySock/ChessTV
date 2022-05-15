@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.example.chesstv.CurrentUser
 import com.example.chesstv.R
 import com.example.chesstv.databinding.FragmentProfileBinding
 import com.google.firebase.auth.ktx.auth
@@ -54,29 +55,8 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
                 )
             }
 
-            val user = Firebase.auth.currentUser
-
-            user?.let {
-                // Name, email address, and profile photo Url
-
-                val name = user.displayName
-                val email = user.email
-                val photoUrl = user.photoUrl
-
-
-                tvUsername.text = name
-                tvUserEmail.text = email
-
-                if (photoUrl != null) {
-                    activity?.let {
-                        Glide.with(it)
-                            .load(photoUrl)
-                            .circleCrop()
-                            .into(imageContainer)
-                    }
-                }
-
-            }
+            CurrentUser().loadUsername(tvUsername)
+            CurrentUser().loadAvatar(imageContainer)
 
         }
 
