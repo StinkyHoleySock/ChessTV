@@ -10,6 +10,8 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.chesstv.R
 import com.example.chesstv.databinding.FragmentProfileBinding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class ProfileFragment: Fragment(R.layout.fragment_profile) {
 
@@ -39,7 +41,11 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
         with(binding){
 
             // todo hardcode // navigation to empty fragment
-            navigateToEmpty(listOf(privacy, profile, confidentiality, subscriptions, statistics))
+            navigateToEmpty(listOf(privacy, profile, confidentiality, subscriptions))
+
+            statistics.setOnClickListener {
+                findNavController().navigate(R.id.action_profileFragment_to_statisticsFragment)
+            }
 
 
             settings.setOnClickListener {
@@ -48,16 +54,29 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
                 )
             }
 
-            // todo this data must be from firebase
-            activity?.let {
-                Glide.with(it)
-                    .load(R.drawable.ic_example_avatar)
-                    .circleCrop()
-                    .into(imageContainer)
-            }
+            val user = Firebase.auth.currentUser
 
-            tvUsername.text = "Дмитрий Первов"
-            tvCity.text = "Углич"
+            user?.let {
+                // Name, email address, and profile photo Url
+
+                val name = user.displayName
+                val email = user.email
+                val photoUrl = user.photoUrl
+
+
+                tvUsername.text = name
+                tvUserEmail.text = email
+
+                if (photoUrl != null) {
+                    activity?.let {
+                        Glide.with(it)
+                            .load(photoUrl)
+                            .circleCrop()
+                            .into(imageContainer)
+                    }
+                }
+
+            }
 
         }
 

@@ -11,10 +11,12 @@ import com.example.chesstv.R
 import com.example.chesstv.databinding.FragmentRegisterBinding
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class RegisterFragment: Fragment(R.layout.fragment_register) {
+
+class RegisterFragment : Fragment(R.layout.fragment_register) {
 
     private lateinit var binding: FragmentRegisterBinding
     private lateinit var auth: FirebaseAuth
@@ -57,7 +59,6 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
                     // TODO: accept rules
 
                     else -> firebaseSignUp()
-
                 }
 
             }
@@ -70,23 +71,34 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
             binding.etPassword.text.toString()
         ).addOnCompleteListener { task ->
             if (task.isSuccessful) {
-                // Sign in success, update UI with the signed-in user's information
+
+                val user = FirebaseAuth.getInstance().currentUser
+
+                val profileUpdates = UserProfileChangeRequest.Builder()
+                    .setDisplayName(
+                        binding.etName.text.toString() + ' ' + binding.etSurname.text.toString()
+                    ).build()
+
+                user!!.updateProfile(profileUpdates)
+
                 findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
-                // TODO: bundleOf
-                //val user = auth.currentUser
-                //updateUI(user)
+
             } else {
-                // If sign in fails, display a message to the user.
-                Toast.makeText(activity, "Authentication failed. ${task.exception}",
-                    Toast.LENGTH_LONG).show()
-                //updateUI(null)
+                Toast.makeText(
+                    activity, "Authentication failed. ${task.exception}",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         }
 
     }
 
     private fun toast(field: TextInputLayout) {
-        Toast.makeText(activity, "Поле '${field.hint.toString()}' не может быть пустым!", Toast.LENGTH_SHORT).show()
+        Toast.makeText(
+            activity,
+            "Поле '${field.hint.toString()}' не может быть пустым!",
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
 }

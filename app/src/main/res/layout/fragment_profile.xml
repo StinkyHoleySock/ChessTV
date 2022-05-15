@@ -39,32 +39,20 @@
         app:layout_constraintStart_toStartOf="@id/title_view"
         app:layout_constraintTop_toBottomOf="@id/image_container" />
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/tv_user_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/user_email"
+        android:textColor="@color/white"
+        android:textSize="15sp"
         android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/tv_username"
         app:layout_constraintStart_toStartOf="@+id/tv_username"
-        app:layout_constraintTop_toBottomOf="@+id/tv_username"
-        tools:ignore="UseCompoundDrawables">
+        app:layout_constraintTop_toBottomOf="@+id/tv_username"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_place" />
-
-        <TextView
-            android:id="@+id/tv_city"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/raleway_light"
-            android:text="@string/user_place"
-            android:textColor="@color/white"
-            android:textSize="15sp" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

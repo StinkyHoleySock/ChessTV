@@ -53,6 +53,11 @@
     <string name="user_avatar">User avatar</string>
     <string name="save">Сохранить данные</string>
     <string name="name_surname">Name Surname</string>
+    <string name="logout">Выйти</string>
+    <string name="no_network">Нет соединения с интернетом</string>
+    <string name="user_email">example@gmail.com</string>
+    <string name="_1">Категория</string>
+    <string name="_123">123</string>
 
 
 </resources>
