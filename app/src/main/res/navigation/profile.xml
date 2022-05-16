@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_settingsFragment_to_fragmentProfileData"
             app:destination="@id/fragmentProfileData" />
+        <action
+            android:id="@+id/action_settingsFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
     </fragment>
     <fragment
         android:id="@+id/fragmentEmpty"
@@ -41,4 +44,8 @@
         android:id="@+id/statisticsFragment"
         android:name="com.example.chesstv.screens.profile.StatisticsFragment"
         android:label="StatisticsFragment" />
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.chesstv.screens.LoginFragment"
+        android:label="LoginFragment" />
 </navigation>

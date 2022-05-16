@@ -53,7 +53,7 @@ class SettingsFragment: Fragment(R.layout.fragment_profile_settings) {
 
             tvLogout.setOnClickListener {
                 FirebaseAuth.getInstance().signOut()
-                // TODO: navigate
+                //todo navigate
             }
         }
     }

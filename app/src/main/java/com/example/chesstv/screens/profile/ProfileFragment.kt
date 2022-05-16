@@ -7,12 +7,8 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.bumptech.glide.Glide
-import com.example.chesstv.CurrentUser
 import com.example.chesstv.R
 import com.example.chesstv.databinding.FragmentProfileBinding
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 
 class ProfileFragment: Fragment(R.layout.fragment_profile) {
 
@@ -57,6 +53,7 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
 
             CurrentUser().loadUsername(tvUsername)
             CurrentUser().loadAvatar(imageContainer)
+            CurrentUser().loadEmail(tvUserEmail)
 
         }
 

@@ -13,7 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chesstv.App
-import com.example.chesstv.CurrentUser
+import com.example.chesstv.screens.profile.CurrentUser
 import com.example.chesstv.R
 import com.example.chesstv.databinding.FragmentWatchStreamBinding
 import com.example.chesstv.model.CommentsListener
