@@ -62,7 +62,7 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
                             .show()
                     }
                     
-                    else -> firebaseSignIn()
+                    else -> firebaseSignIn(etEmail.text.toString(), etPassword.text.toString())
                 }
                 
             }
@@ -71,10 +71,9 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
         
     }
 
-    private fun firebaseSignIn() {
+    private fun firebaseSignIn(email: String, password: String) {
         auth.signInWithEmailAndPassword(
-            binding.etEmail.text.toString(),
-            binding.etPassword.text.toString()
+            email, password
         ).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 // Sign in success, update UI with the signed-in user's information
@@ -90,4 +89,13 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
             }
         }
     }
+
+    fun validateUser(email: String, password: String): Boolean {
+        return (email.isNotEmpty() && password.isNotEmpty() && password.length >= 8)
+    }
+
+    fun isEmailValid(email: String): Boolean {
+        return email.contains("mail", false)
+    }
+
 }

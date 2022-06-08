@@ -1,4 +1,4 @@
-package com.example.chesstv.screens.watch_streams
+package com.example.chesstv.screens.streams.watch_streams
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -36,7 +36,5 @@ class CommentsViewModel(
     fun deleteComment(comment: Comment) {
         commentsService.deleteComment(comment)
     }
-
-
-
 }
+

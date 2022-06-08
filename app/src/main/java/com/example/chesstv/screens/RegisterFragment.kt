@@ -101,4 +101,24 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         ).show()
     }
 
+    fun validateUser(
+        username: String,
+        surname: String,
+        email: String,
+        password: String
+    ) : Boolean {
+
+        return (username.isNotEmpty() && surname.isNotEmpty()
+                && email.isNotEmpty() && password.isNotEmpty())
+    }
+
+    fun checkRules(isChecked: Boolean): String {
+        return  if (isChecked) "Rules is accepted"
+        else "Rules not accepted"
+    }
+
+    fun validatePassword(password: String) : Boolean {
+        return (password.length >= 8)
+    }
+
 }

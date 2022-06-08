@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/watchStreamFragment"
-        android:name="com.example.chesstv.screens.watch_streams.WatchStreamFragment"
+        android:name="com.example.chesstv.screens.streams.watch_streams.WatchStreamFragment"
         android:label="Трансляция" >
         <action
             android:id="@+id/action_watchStreamFragment_to_userProfileFragment"
@@ -30,6 +30,6 @@
     </fragment>
     <fragment
         android:id="@+id/userProfileFragment"
-        android:name="com.example.chesstv.screens.watch_streams.UserProfileFragment"
+        android:name="com.example.chesstv.screens.streams.watch_streams.UserProfileFragment"
         android:label="UserProfileFragment" />
 </navigation>

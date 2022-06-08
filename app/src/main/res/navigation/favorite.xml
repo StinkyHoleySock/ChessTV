@@ -7,6 +7,6 @@
 
     <fragment
         android:id="@+id/favoriteFragment2"
-        android:name="com.example.chesstv.screens.FavoriteFragment"
+        android:name="com.example.chesstv.screens.favorite.FavoriteFragment"
         android:label="Избранное" />
 </navigation>

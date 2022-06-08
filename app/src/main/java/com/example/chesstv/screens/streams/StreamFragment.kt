@@ -10,7 +10,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chesstv.R
-import com.example.chesstv.screens.watch_streams.WatchStreamFragment
+import com.example.chesstv.model.Streams
+import com.example.chesstv.screens.streams.watch_streams.WatchStreamFragment
 
 
 class StreamFragment: Fragment(R.layout.fragment_stream), StreamAdapter.MyClickListener {
@@ -31,12 +32,12 @@ class StreamFragment: Fragment(R.layout.fragment_stream), StreamAdapter.MyClickL
         val streamsRecyclerView: RecyclerView = view.findViewById(R.id.streams_recycler_view)
 
         val listOfStreams = mutableListOf(
-            Streams(1,"Пробный стрим №1", "Краткое описание трансляции", R.drawable.ic_stream_1, 1),
-            Streams(1,"Пробный стрим №2", "Краткое описание трансляции", R.drawable.ic_stream_2, 1),
-            Streams(1,"Пробный стрим №3", "Краткое описание трансляции", R.drawable.ic_stream_3, 1),
-            Streams(1,"Пробный стрим №4", "Краткое описание трансляции", R.drawable.ic_stream_4, 1),
-            Streams(1,"Пробный стрим №5", "Краткое описание трансляции", R.drawable.ic_stream_5, 1),
-            Streams(1,"Пробный стрим №6", "Краткое описание трансляции", R.drawable.ic_stream_6, 1)
+            Streams(1,"Игра со зрителями", "С небольшим призовым фондом", R.drawable.ic_stream_1, 1, IMAGES[1]),
+            Streams(1,"Шахматный стрим", "Турнир и игра со зрителями", R.drawable.ic_stream_2, 1, IMAGES[1]),
+            Streams(1,"Комментирует Карпов!", "Непомнящий - Гири", R.drawable.ic_stream_3, 1, IMAGES[1]),
+            Streams(1,"5 ключевых навыков", "Сильнейших шахматистов", R.drawable.ic_stream_4, 1, IMAGES[1]),
+            Streams(1,"Обзор третьего тура", "Турнир претендентов", R.drawable.ic_stream_5, 1, IMAGES[1]),
+            Streams(1,"Карлсен - Накамура!", "Стрим Chess24", R.drawable.ic_stream_6, 1, IMAGES[1])
 
         )
 
@@ -49,6 +50,17 @@ class StreamFragment: Fragment(R.layout.fragment_stream), StreamAdapter.MyClickL
         findNavController().navigate(
             R.id.action_streamFragment_to_watchStreamFragment,
             bundleOf(WatchStreamFragment.streamId to position)
+        )
+    }
+
+    companion object {
+        private val IMAGES = mutableListOf(
+            "https://avatarko.ru/img/kartinka/25/muzhchina_serial_dengi_24933.jpg",
+            "https://avatarko.ru/img/kartinka/14/serial_13916.jpg",
+            "https://avatarko.ru/img/kartinka/16/film_gnom_15452.jpg",
+            "https://avatarko.ru/img/kartinka/15/film_gnom_14558.jpg",
+            "https://avatarko.ru/img/kartinka/11/film_muzhchina_galstuk_10235.jpg",
+            "https://avatarko.ru/img/kartinka/11/film_elf_Middle-earth_Arwen_10847.jpg"
         )
     }
 }

@@ -3,7 +3,7 @@ package com.example.chesstv.model
 import com.example.chesstv.tasks.Task
 import com.github.javafaker.Faker
 
-typealias CommentsListener = (comment: List<Comment>) -> Unit
+    typealias CommentsListener = (comment: List<Comment>) -> Unit
 
 class CommentsService {
 

@@ -16,9 +16,7 @@ class NewsService {
     private val listeners = mutableSetOf<NewsListener>()
 
     suspend fun loadNews(): MutableList<News> {
-
         withContext(Dispatchers.IO) {
-
             val url = "https://ria.ru/chess/"
             val doc: Document = Jsoup.connect(url).get()
             val news: Elements = doc.select("div[class=list-item]")

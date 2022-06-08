@@ -59,6 +59,7 @@
     <string name="_1">Категория</string>
     <string name="_123">123</string>
     <string name="write_comment">Напишите комментарий...</string>
+    <string name="lorem_short">Lorem ipsum dolor</string>
 
 
 </resources>

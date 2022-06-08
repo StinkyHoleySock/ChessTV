@@ -10,11 +10,9 @@ class SettingPreferences(context: Context) {
     var darkMode = preferences.getInt(DARK_STATUS, 0)
         set(value) = preferences.edit().putInt(DARK_STATUS, value).apply()
 
-    var signedIn = preferences.getBoolean(SIGN_IN_STATUS, false)
-        set(value) = preferences.edit().putBoolean(SIGN_IN_STATUS, value).apply()
-
     companion object {
         private const val DARK_STATUS = "com.example.chesstv.DARK_STATUS"
         private const val SIGN_IN_STATUS = "com.example.chesstv.SIGN_IN_STATUS"
     }
 }
+

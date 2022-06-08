@@ -1,4 +1,4 @@
-package com.example.chesstv.screens.watch_streams
+package com.example.chesstv.screens.streams.watch_streams
 
 import android.view.LayoutInflater
 import android.view.Menu

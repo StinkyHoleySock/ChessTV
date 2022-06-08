@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.chesstv.R
 import com.example.chesstv.databinding.FragmentProfileDataBinding
@@ -104,6 +105,7 @@ class FragmentProfileData: Fragment(R.layout.fragment_profile_data) {
 
                 Toast.makeText(activity, "Данные загружены", Toast.LENGTH_SHORT).show()
 
+
                 // Заугрузка аватарки и имени
                 val user = FirebaseAuth.getInstance().currentUser
 
@@ -146,7 +148,4 @@ class FragmentProfileData: Fragment(R.layout.fragment_profile_data) {
             }
         }
     }
-
-
-
 }
